@@ -27,15 +27,6 @@ public class AdjustPicActivity extends AppCompatActivity {
                 .setActivityMenuIconColor(Color.WHITE)
                 .setActivityMenuIconColor(Color.BLACK)
                 .start(this);
-
-        Button adjustButton = findViewById(R.id.adjustButton);
-        adjustButton.setOnClickListener(
-                new Button.OnClickListener() {
-                    public void onClick(View v) {
-                        startActivity(new Intent(AdjustPicActivity.this, HttpSndRcvActivity.class));
-                    }
-                }
-        );
     }
 
     @Override
@@ -44,8 +35,9 @@ public class AdjustPicActivity extends AppCompatActivity {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
                 Uri resultUri = result.getUri();
-                ImageView facePictureImageView = findViewById(R.id.facePicture);
-                facePictureImageView.setImageURI(resultUri);
+                Intent intent = new Intent(AdjustPicActivity.this, HttpSndRcvActivity.class);
+                intent.putExtra("croppedImageUri", resultUri);
+                startActivity(intent);
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 result.getError();
             }

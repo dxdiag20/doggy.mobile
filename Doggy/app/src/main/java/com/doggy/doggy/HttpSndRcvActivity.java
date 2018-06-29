@@ -1,15 +1,12 @@
 package com.doggy.doggy;
 
-import android.content.Intent;
-import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URI;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -28,7 +25,9 @@ public class HttpSndRcvActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_http_snd_rcv);
-        //startActivity(new Intent(HttpSndRcvActivity.this, ShowResultActivity.class));
+        Uri croppedImageUri = getIntent().getParcelableExtra("croppedImageUri");
+        // TODO: Send croppedImageUri to the server
+
         final TextView httpTextViewResult = findViewById(R.id.textView);
         httpTextViewResult.setText("server on");
         OkHttpClient client = new OkHttpClient();
