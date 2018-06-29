@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         takePicButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        startActivity(new Intent(MainActivity.this, TakePicActivity.class));
+                        startActivity(new Intent(MainActivity.this, AdjustPicActivity.class));
                     }
                 }
         );
