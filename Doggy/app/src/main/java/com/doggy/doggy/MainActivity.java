@@ -1,9 +1,10 @@
 package com.doggy.doggy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,11 +13,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton takePicButton = (ImageButton) findViewById(R.id.takePicButton);
+        Button takePicButton = findViewById(R.id.takePicButton);
         takePicButton.setOnClickListener(
-                new ImageButton.OnClickListener() {
+                new Button.OnClickListener() {
                     public void onClick(View v) {
-
+                        startActivity(new Intent(MainActivity.this, TakePicActivity.class));
                     }
                 }
         );
