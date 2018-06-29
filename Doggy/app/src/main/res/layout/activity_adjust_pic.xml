@@ -7,6 +7,12 @@
         android:id="@+id/facePicture"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    <!--<com.theartofdev.edmodo.cropper.CropImageView-->
+        <!--xmlns:custom="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/cropImageView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"/>-->
 
     <Button
         android:id="@+id/adjustButton"
