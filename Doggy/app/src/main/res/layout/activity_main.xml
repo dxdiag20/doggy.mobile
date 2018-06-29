@@ -17,7 +17,7 @@
 
     <Button
         android:id="@+id/takePicButton"
-        android:layout_width="wrap_content"
+        android:layout_width="94dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button_circle"
         android:text="사진을 찍어주세요" />

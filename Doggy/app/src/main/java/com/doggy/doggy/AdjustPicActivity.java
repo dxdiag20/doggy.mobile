@@ -10,13 +10,13 @@ public class AdjustPicActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_http_snd_rcv);
+        setContentView(R.layout.activity_adjust_pic);
 
         Button adjustButton = findViewById(R.id.adjustButton);
         adjustButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        startActivity(new Intent(AdjustPicActivity.this, ShowResultActivity.class));
+                        startActivity(new Intent(AdjustPicActivity.this, HttpSndRcvActivity.class));
                     }
                 }
         );

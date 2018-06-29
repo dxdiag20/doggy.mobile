@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.doggy.doggy">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -18,8 +19,8 @@
         </activity>
         <activity android:name=".TakePicActivity"></activity>
         <activity android:name=".AdjustPicActivity"></activity>
-        <activity android:name=".HttpSndRcvActivity"></activity>
+        <activity android:name=".HttpSndRcvActivity">
+        </activity>
         <activity android:name=".ShowResultActivity"></activity>
     </application>
-
 </manifest>
