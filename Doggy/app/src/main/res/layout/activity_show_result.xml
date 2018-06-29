@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<LinearLayout
+    android:id="@+id/wow"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="120dp"
+        android:id="@+id/doggy"
+
+        />
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:id="@+id/doggy2"
+        />
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="100dp" />
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:id="@+id/button1"
+        />
+
+
+
+</LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width = "400dp"
+        android:layout_height= "400dp"
+
+
+        />
+
+</RelativeLayout>

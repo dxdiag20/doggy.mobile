@@ -12,6 +12,7 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 public class AdjustPicActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adjust_pic);
 
