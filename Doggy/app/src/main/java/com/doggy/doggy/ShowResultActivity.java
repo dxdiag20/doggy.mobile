@@ -17,11 +17,12 @@ public class ShowResultActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_show_result);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#000000")));
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#000000")));
 
         mCroppedImageUri = getIntent().getParcelableExtra("croppedImageUri");
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {

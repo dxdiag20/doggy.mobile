@@ -27,7 +27,9 @@
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".AdjustPicActivity"></activity>
         <activity android:name=".HttpSndRcvActivity"></activity>
-        <activity android:name=".ShowResultActivity"></activity>
+        <activity
+            android:name=".ShowResultActivity"
+            android:theme="@style/ShowResultTheme"></activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/AppTheme" />
