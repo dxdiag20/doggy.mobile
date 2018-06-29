@@ -7,6 +7,7 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -26,6 +27,7 @@ import org.json.JSONObject;
 
 public class HttpSndRcvActivity extends AppCompatActivity {
     private static final MediaType MEDIA_TYPE_PNG = MediaType.parse("image/jpg");
+    private Uri mCroppedImageUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +39,10 @@ public class HttpSndRcvActivity extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#000000")));
 
         final TextView httpTextViewResult = findViewById(R.id.textView);
-        Intent intent = getIntent();
-        Uri croppedImageUri = getIntent().getParcelableExtra("croppedImageUri");
-        Uri resultUri = Uri.parse(croppedImageUri.toString());
+
+        mCroppedImageUri = getIntent().getParcelableExtra("croppedImageUri");
+        Log.e("HELLOEVERYONE", mCroppedImageUri.toString());
+        Uri resultUri = Uri.parse(mCroppedImageUri.toString());
         File imageFile = new File(resultUri.getPath());
         httpTextViewResult.setText("나와 닯은 개를 매칭 중입니다");
         OkHttpClient client = new OkHttpClient();
@@ -87,6 +90,11 @@ public class HttpSndRcvActivity extends AppCompatActivity {
                         }
                     });
                 }
+
+                Intent intent = new Intent(HttpSndRcvActivity.this, ShowResultActivity.class);
+                intent.putExtra("croppedImageUri", mCroppedImageUri.toString());
+                startActivity(intent);
+
                 startActivity(new Intent(HttpSndRcvActivity.this, ShowResultActivity.class));
             }
         });
