@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        //startActivity(new Intent(this, ShowResultActivity.class));
+        startActivity(new Intent(this, ShowResultActivity.class));
         //위에 지워야 되는 코드드
        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
