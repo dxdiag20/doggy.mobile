@@ -24,7 +24,6 @@ public class AdjustPicActivity extends AppCompatActivity {
                 .setCropShape(CropImageView.CropShape.OVAL)
                 .setBackgroundColor(Color.argb(232, 255, 179, 0))
                 .setFixAspectRatio(true)
-                .setActivityMenuIconColor(Color.WHITE)
                 .setActivityMenuIconColor(Color.BLACK)
                 .start(this);
     }
