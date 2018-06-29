@@ -1,6 +1,7 @@
 package com.doggy.doggy;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageActivity;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
 public class AdjustPicActivity extends AppCompatActivity {
@@ -19,6 +21,11 @@ public class AdjustPicActivity extends AppCompatActivity {
 
         CropImage.activity()
                 .setGuidelines(CropImageView.Guidelines.ON)
+                .setCropShape(CropImageView.CropShape.OVAL)
+                .setBackgroundColor(Color.argb(232, 255, 179, 0))
+                .setFixAspectRatio(true)
+                .setActivityMenuIconColor(Color.WHITE)
+                .setActivityMenuIconColor(Color.BLACK)
                 .start(this);
 
         Button adjustButton = findViewById(R.id.adjustButton);
