@@ -12,7 +12,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -26,25 +26,26 @@
                 android:layout_height="match_parent"
                 android:src="@drawable/result_pomeranian" />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/match2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:src="@drawable/learn_more_pomeranian" />
+                android:src="@drawable/learn_more_pomeranian" >
+            </ImageView>
 
-            <android.support.v4.view.ViewPager
-                android:id="@+id/viewpager"
+            <RelativeLayout
+                android:id="@+id/slider"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true"
-                android:gravity="bottom">
-
-            </android.support.v4.view.ViewPager>
+                android:background="#00000000"
+                android:gravity="bottom"
+                android:textAlignment="center"/>
         </RelativeLayout>
-    </LinearLayout>
 
+
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>
