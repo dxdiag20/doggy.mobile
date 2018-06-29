@@ -21,9 +21,9 @@
                 android:id="@+id/instructionTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
-                android:gravity="center"
                 android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="#000"
                 android:textSize="19dp" />
 
         </RelativeLayout>
@@ -38,18 +38,17 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:background="#00000000"
-                android:src="@drawable/main_background"/>
+                android:src="@drawable/main_background" />
 
             <ImageButton
                 android:id="@+id/takePicButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_circle"
                 android:layout_centerInParent="true"
+                android:background="@drawable/button_circle"
                 android:src="@drawable/main_button" />
 
         </RelativeLayout>
     </LinearLayout>
-
 
 </android.support.constraint.ConstraintLayout>
