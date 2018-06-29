@@ -17,19 +17,9 @@ public class AdjustPicActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adjust_pic);
 
-        // TODO SEJIN: Get image from TakePicActivity and put it in facePictureView.
-//        Uri facePictureUri = Uri.parse("https://raw.githubusercontent.com/42deSix/Images/master/a_cat_hitting_a_dog.jpg");
-        CropImageView cropImageView = findViewById(R.id.cropImageView);
-//        cropImageView.setImageUriAsync(facePictureUri);
-
-        // start picker to get image for cropping and then use the image in cropping activity
         CropImage.activity()
                 .setGuidelines(CropImageView.Guidelines.ON)
                 .start(this);
-
-        // start cropping activity for pre-acquired image saved on the device
-//        CropImage.activity(facePictureUri)
-//                .start(this);
 
         Button adjustButton = findViewById(R.id.adjustButton);
         adjustButton.setOnClickListener(
@@ -39,8 +29,6 @@ public class AdjustPicActivity extends AppCompatActivity {
                     }
                 }
         );
-
-
     }
 
     @Override
@@ -52,7 +40,7 @@ public class AdjustPicActivity extends AppCompatActivity {
                 ImageView facePictureImageView = findViewById(R.id.facePicture);
                 facePictureImageView.setImageURI(resultUri);
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
-                Exception error = result.getError();
+                result.getError();
             }
         }
     }
