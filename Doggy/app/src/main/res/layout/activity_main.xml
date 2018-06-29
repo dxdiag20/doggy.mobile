@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/common_google_signin_btn_text_dark_default"
     tools:context="com.doggy.doggy.MainActivity">
-
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
@@ -17,9 +18,13 @@
 
     <Button
         android:id="@+id/takePicButton"
-        android:layout_width="94dp"
-        android:layout_height="wrap_content"
+        android:layout_width="176dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="264dp"
         android:background="@drawable/button_circle"
-        android:text="사진을 찍어주세요" />
+        android:text="사진 찍기"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="92dp" />
 
 </android.support.constraint.ConstraintLayout>
