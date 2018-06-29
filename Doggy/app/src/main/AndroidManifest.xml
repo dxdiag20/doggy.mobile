@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TakePicActivity"></activity>
+        <activity android:name=".AdjustPicActivity"></activity>
+        <activity android:name=".HttpSndRcvActivity"></activity>
+        <activity android:name=".ShowResultActivity"></activity>
     </application>
 
 </manifest>
