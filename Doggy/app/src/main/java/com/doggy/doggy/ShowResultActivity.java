@@ -2,17 +2,14 @@ package com.doggy.doggy;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.net.Uri;
 
 import com.bumptech.glide.Glide;
 
@@ -35,12 +32,18 @@ public class ShowResultActivity extends AppCompatActivity {
 //        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#000000")));
 
         Intent intentResult = getIntent();
+        String facesString = intentResult.getStringExtra("face");
+        Uri facesUri = Uri.parse(facesString);
+        Log.e("bbbbb", facesUri.toString());
         String dogName = intentResult.getStringExtra("resultJson");
         String serverURL1 = "http://222.112.134.57:5008/static/" + dogName + "/match_1.png";
         String serverURL2 = "http://222.112.134.57:5008/static/" + dogName + "/match_2.png";
         String serverURL3 = "http://222.112.134.57:5008/static/" + dogName + "/match_3.png";
-        ImageView imageView1 = (ImageView) findViewById(R.id.match1);
+        ImageView imageView1 = findViewById(R.id.match1);
+        ImageView yourFace = findViewById(R.id.yourFace);
+        yourFace.setImageURI(facesUri);
 
+//        yourFace.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
         Glide.with(this)
                 .load(serverURL1) // image url

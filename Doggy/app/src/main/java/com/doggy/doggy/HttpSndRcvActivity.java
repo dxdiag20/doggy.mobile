@@ -42,7 +42,7 @@ public class HttpSndRcvActivity extends AppCompatActivity {
         final Intent intentResult = new Intent(getApplicationContext(), ShowResultActivity.class);
         Uri croppedImageUri = getIntent().getParcelableExtra("croppedImageUri");
         Uri resultUri = Uri.parse(croppedImageUri.toString());
-
+        intentResult.putExtra("face",croppedImageUri.toString());
         File imageFile = new File(resultUri.getPath());
         httpTextViewResult.setText("나와 닯은 개를 매칭 중입니다");
         OkHttpClient client = new OkHttpClient.Builder()
@@ -69,11 +69,9 @@ public class HttpSndRcvActivity extends AppCompatActivity {
                 if(response.isSuccessful()) {
 
                     final String myResponse = response.body().string();
-                    System.out.print(myResponse);
                     HttpSndRcvActivity.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            System.out.println("매칭 완료!");
                                 httpTextViewResult.setText("매칭 완료");
                         }
                     });
