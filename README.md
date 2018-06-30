@@ -14,3 +14,9 @@
 
 [Inception-v3 학습모델](https://github.com/openhack-Doggy/doggy.machine-learning)으로 학습된 120종의 견종을 구분하는 모델을 [Flask 서버](https://github.com/openhack-Doggy/doggy.server) 상에 업로드합니다. 안드로이드 기기에서 촬영된 사진을 서버에 보내어 가장 닮은 견종이 무엇인지를 응답으로 받습니다.
 
+## Library Dependency (Android)
+
+* [Android-Image-Cropper 2.7](https://github.com/ArthurHub/Android-Image-Cropper)
+* [OkHttp 3.10](https://github.com/square/okhttp)
+* [Glide 4.7.1](https://github.com/bumptech/glide/issues/3049)
+
